@@ -1,7 +1,6 @@
 package com.fgrapp.blog.blogserver.sys.controller;
 import java.util.Map;
 import java.util.List;
-
 import com.fgrapp.blog.blogserver.common.Result;
 import com.fgrapp.blog.blogserver.common.annotation.ControllerEndpoint;
 import com.fgrapp.blog.blogserver.common.controller.AbstractController;
