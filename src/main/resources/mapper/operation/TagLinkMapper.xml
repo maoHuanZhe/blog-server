@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fgrapp.blog.blogserver.operation.mapper.TagLinkMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fgrapp.blog.blogserver.operation.entity.TagLink">
+        <id column="id" property="id" />
+        <result column="tag_id" property="tagId" />
+        <result column="link_id" property="linkId" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, tag_id, link_id, type
+    </sql>
+
+</mapper>

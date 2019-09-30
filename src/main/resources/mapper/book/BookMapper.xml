@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fgrapp.blog.blogserver.book.mapper.BookMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fgrapp.blog.blogserver.book.entity.Book">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="cover" property="cover" />
+        <result column="author" property="author" />
+        <result column="category_id" property="categoryId" />
+        <result column="recommend" property="recommend" />
+        <result column="publisher" property="publisher" />
+        <result column="publish_date" property="publishDate" />
+        <result column="page_num" property="pageNum" />
+        <result column="grade" property="grade" />
+        <result column="description" property="description" />
+        <result column="catalogue" property="catalogue" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="read_num" property="readNum" />
+        <result column="comment_num" property="commentNum" />
+        <result column="like_num" property="likeNum" />
+        <result column="publish" property="publish" />
+        <result column="progress" property="progress" />
+        <result column="reading" property="reading" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, cover, author, category_id, recommend, publisher, publish_date, page_num, grade, description, catalogue, create_time, update_time, read_num, comment_num, like_num, publish, progress, reading
+    </sql>
+
+</mapper>

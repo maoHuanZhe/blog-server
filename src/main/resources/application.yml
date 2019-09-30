@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    username: root
+    password: 633664
+    url: jdbc:p6spy:mysql://47.98.228.27:3306/blog?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+  redis:
+    # Redis数据库索引（默认为 0）
+    database: 0
+    # Redis服务器地址
+    host: 47.98.228.27
+    # Redis服务器连接端口
+    port: 6379
+    # Redis 密码
+    password: 633664
+    jedis:
+      pool:
+        # 连接池中的最小空闲连接
+        min-idle: 8
+        # 连接池中的最大空闲连接
+        max-idle: 500
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 2000
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 10000
+    # 连接超时时间（毫秒）
+    timeout: 0
+server:
+  servlet:
+    context-path: /blog
+
+mybatis-plus:
+  # 实体类扫描路径
+  type-aliases-package: com.fgrapp.blog.blogserver.*.entity
+  mapper-locations: classpath:mapper/*/*.xml
+  configuration:
+    jdbc-type-for-null: null
+  global-config:
+    # 关闭 mybatis-plus的 banner
+    banner: false
+  typeEnumsPackage: com.fgrapp.blog.blogserver.common.enums
+
